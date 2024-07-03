@@ -10,10 +10,23 @@
     "permissions": [
         "storage"
     ],
-    "host_permissions": [
-        "https://v3.football.api-sports.io/*"
-    ],
     "background": {
         "service_worker": "background.js"
-    }
+    },
+    "host_permissions": [
+        "https://v3.football.api-sports.io/",
+        "https://api-nba-v1.p.rapidapi.com/",
+        "https://api-nfl-v1.p.rapidapi.com/",
+        "https://v1.formula-1.api-sports.io/"
+    ],
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
 }

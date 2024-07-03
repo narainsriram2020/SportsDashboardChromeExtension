@@ -5,95 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sports Dashboard</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            width: 350px;
-            margin: 0;
-            padding: 15px;
-            background-color: #f0f0f0;
-        }
-
-        h1 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        /* Add your specific styles for the Las Vegas track image */
-        .race h4:contains("Las Vegas Grand Prix")+.circuit-image {
-            max-width: 30%;
-            max-height: 30px;
-            display: block;
-            margin: 10px auto;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 15px;
-        }
-
-        button {
-            background-color: #4CAF50;
-            border: none;
-            color: white;
-            padding: 10px 15px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 14px;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
-
-        #contentArea {
-            background-color: white;
-            border-radius: 8px;
-            padding: 15px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .hidden {
-            display: none;
-        }
-
-        #loadingSpinner {
-            border: 4px solid #f3f3f3;
-            border-top: 4px solid #3498db;
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            animation: spin 1s linear infinite;
-            margin: 20px auto;
-        }
-
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        .sportsSelection {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 20px;
-        }
-
-        .sportsSelection button {
-            width: 45%;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -102,6 +14,8 @@
     <div class="sportsSelection">
         <button id="selectArsenal">Arsenal</button>
         <button id="selectF1">Formula 1</button>
+        <button id="selectThunder">OKC Thunder</button>
+        <button id="selectGiants">NY Giants</button>
     </div>
 
     <nav id="arsenalNav" class="hidden">
@@ -112,13 +26,21 @@
 
     <nav id="f1Nav" class="hidden">
         <button id="races">Races</button>
-        <button id="standings">Standings</button>
-        <button id="drivers">Drivers</button>
+    </nav>
+
+    <nav id="thunderNav" class="hidden">
+        <button id="thunderMatches">Matches</button>
+        <button id="thunderStatistics">Statistics</button>
+        <button id="thunderPlayers">Players</button>
+    </nav>
+
+    <nav id="giantsNav" class="hidden">
+        <button id="giantsMatches">Matches</button>
+        <button id="giantsStatistics">Statistics</button>
+        <button id="giantsPlayers">Players</button>
     </nav>
 
     <div id="contentArea"></div>
-
-    <div id="loadingSpinner" class="hidden"></div>
 
     <script src="popup.js"></script>
 </body>
