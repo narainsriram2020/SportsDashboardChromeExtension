@@ -15,7 +15,7 @@ To install the Sports Dashboard Chrome Extension, follow these steps:
 
 1. **Clone or download the repository:**
     ```sh
-    git clone https://github.com/your-username/sports-dashboard.git
+    git clone https://github.com/narainsriram2020/SportsDashboardChromeExtension.git
     ```
 2. **Open Chrome and navigate to the Extensions page:**
     - Go to `chrome://extensions/` or click on the menu (three dots in the top-right corner) -> More tools -> Extensions.
