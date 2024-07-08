@@ -1,11 +1,9 @@
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-    if (request.action === "fetchArsenalMatches" ||
-        request.action === "fetchArsenalStats" ||
-        request.action === "fetchArsenalPlayers" ||
-        request.action === "fetchF1Races") {
-
+    if (request.action === "fetchMatches") {
         fetch(request.url, {
-            headers: { 'x-apisports-key': request.apiKey }
+            headers: {
+                'x-apisports-key': request.apiKey
+            }
         })
             .then(response => response.json())
             .then(data => sendResponse({ data: data }))
